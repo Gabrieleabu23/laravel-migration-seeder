@@ -24,6 +24,7 @@ return new class extends Migration
             $table->boolean('in_orario')->default(true);
             $table->boolean('cancellato')->default(false);
             $table->timestamps();
+            
         });
     }
     /**
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('trains');
     }
 };

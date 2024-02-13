@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\Train;
+use App\Models\train;
 class TrainSeeder extends Seeder
 {
     /**
@@ -15,19 +15,8 @@ class TrainSeeder extends Seeder
      */
     public function run()
     {
-        $pizza = new Train();
-        $pizza-> id= 1;
-        $pizza -> azienda = 'italo';
-        $pizza -> stazione_partenza = "Bologna";
-        $pizza -> stazione_arrivo = "Milano";
-        $pizza -> ora_partenza = ('16:00');
-        $pizza -> ora_arrivo = ('18:00');
-        $pizza -> codice_treno = 9952;
-        $pizza -> carozze_treno = 4;
-        $pizza -> in_orario = true;
-        $pizza -> cancellato = false;
+        train :: factory() -> count(10) -> create();
 
-        $pizza -> save();
 
 
     
