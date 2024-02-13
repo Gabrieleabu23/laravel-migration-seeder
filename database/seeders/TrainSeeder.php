@@ -20,8 +20,8 @@ class TrainSeeder extends Seeder
         $pizza -> azienda = 'italo';
         $pizza -> stazione_partenza = "Bologna";
         $pizza -> stazione_arrivo = "Milano";
-        $pizza -> ora_partenza = 16;
-        $pizza -> ora_arrivo = 18;
+        $pizza -> ora_partenza = ('16:00');
+        $pizza -> ora_arrivo = ('18:00');
         $pizza -> codice_treno = 9952;
         $pizza -> carozze_treno = 4;
         $pizza -> in_orario = true;
