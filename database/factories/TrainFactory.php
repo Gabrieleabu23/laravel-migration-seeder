@@ -15,13 +15,13 @@ class TrainFactory extends Factory
     public function definition()
     {
         return [
-         'azienda' => fake() -> word(),
-         'stazione_partenza' => fake()->sentence(2),
-         'stazione_arrivo' => fake()->sentence(2),
-         'ora_partenza' => fake() -> time(),
-         'ora_arrivo' => fake() -> time(),
-         'codice_treno' => fake()->randomNumber(5, false),
-         'carozze_treno' => fake()->randomNumber(8,false),
+         'azienda' => fake() -> company(),
+         'stazione_partenza' => fake()->city(),
+         'stazione_arrivo' => fake()->city(),
+         'ora_partenza' => fake() -> dateTimeBetween('0 week', '+1 week'),
+         'ora_arrivo' => fake() -> dateTimeBetween('0 week', '+1 week'),
+         'codice_treno' => fake()->unique()->numerify('treno-####'),
+         'carozze_treno' => fake()->numberBetween(5,20),
          'in_orario' => fake()->boolean(),
          'cancellato' => fake()->boolean()
         ];

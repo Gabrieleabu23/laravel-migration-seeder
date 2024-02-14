@@ -15,7 +15,7 @@ class TrainSeeder extends Seeder
      */
     public function run()
     {
-        train :: factory() -> count(10) -> create();
+        train :: factory() -> count(50) -> create();
 
 
 
